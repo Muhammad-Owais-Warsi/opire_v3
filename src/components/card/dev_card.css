@@ -1,0 +1,229 @@
+body {
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.dev-card-horizontal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1f1f 0%, #171717 100%);
+    border-radius: 16px;
+    padding: 24px;
+    width: 600px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dev-card-horizontal:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15),
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.avatar-section {
+    flex: 0 0 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+}
+
+.info-section {
+    flex: 1;
+    padding-left: 24px;
+    color: #ffffff;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #00ffcc;
+    font-weight: 700;
+}
+
+.role-badge {
+    background-color: rgba(0, 255, 204, 0.1);
+    color: #00ffcc;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+h4 {
+    margin: 8px 0 16px;
+    font-size: 1rem;
+    color: #bbbbbb;
+    font-weight: 400;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00ffcc;
+}
+
+.social-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    color: #bbbbbb;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #00ffcc;
+}
+
+.follow-btn {
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.follow-btn:hover {
+    background-color: #00ffaa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+}
+
+.powered-by-section {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+}
+
+.powered-by-section span {
+    opacity: 0.7;
+    position: relative;
+    left:20px;
+}
+
+.opire-logo {
+    display: flex;
+    align-items: center;
+}
+
+.opire-logo svg {
+    width: 100px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .dev-card-horizontal {
+        flex-direction: column;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .name-container {
+        justify-content: center;
+    }
+
+    .info-section {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .social-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .powered-by-section {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+        width: 100%;
+        gap: 4px;
+    }
+}
